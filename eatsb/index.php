@@ -2,7 +2,7 @@
 <html lang="zh">
 
 <head>
-    <title>吃掉小鹿乃</title>
+    <title>吃掉田睦枫</title>
     <meta itemprop="name" content="吃掉田睦枫" />
     <meta itemprop="description" content="新概念音游" />
     <meta charset="utf-8" />
