@@ -401,11 +401,12 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
         }
         // TODO 添加反馈
         if (mode === MODE_ENDLESS) return '';
-        if (score <= 49) return '试着好好练一下？';
-        if (score <= 99) return 'TCL';
-        if (score <= 149) return 'TQL';
-        if (score <= 199) return '您';
-        return '人？';
+        if (score <= 39) return "田睦枫很生气";
+        if (score <= 69) return '还行';
+        if (score <= 99) return '好';
+        if (score <= 149) return '很好';
+        if (score <= 179) return '田睦枫很欣赏你的手速';
+        return '田睦枫爱你';
     }
 
     function toStr(obj) {
