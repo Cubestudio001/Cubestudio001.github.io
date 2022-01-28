@@ -9,7 +9,8 @@
             background-image: linear-gradient(to right, rgb(0, 162, 255) , rgb(0, 89, 255), rgb(0, 162, 255));
         }
     </style>
-    <script src="/scr/scr.jq.min.js"></script>
+    <script src="scr/jq.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <p class="login-board-title" style="width:auto;">Coming Soon</h1>
@@ -42,25 +43,22 @@
     </style>
     <h2>您想去哪里？</h2>
     <br>
-    <button onclick="DotBeater()" class="devloping">DotBeater</button><a>开发中</a><br>
+    <button class="devloping">DotBeater</button><br>
     <button onclick="eatsb()" class="ok">吃田睦枫</button><br>
     <button onclick="github()" class="ok">GitHub Open-Source Page</button><br>
     <button class="devloping">Phigros 模拟器</button>
     <script>
-        function DotBeater(){
-            alert("开发中");
-        }
+        
         function eatsb(){
             window.location.href = "eatsb/index.html";
         }
         function github(){
             window.location.href = "https://github.com/Cubestudio001/Cubestudio001.github.io";
         }
-        /*
-        $("button").click(
-            
-        )
-        */
+        $(".devloping").click(function(){
+            alert("开发中");
+            $(this).fadeOut("fast");
+        })
     </script>
 </body>
 </html>
