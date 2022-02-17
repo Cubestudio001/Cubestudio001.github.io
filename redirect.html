@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <script>
+        var s = window.location.search.substr(1);
+        if (s==0) alert("啊哦，出错了");
+        switch(s){
+            case "bilibili":
+                window.location.href ="https://space.bilibili.com/177150108";
+                break;
+            case "youtube":
+                window.location.href="https://www.youtube.com/channel/UCx8_vCXuwCKYSmWxC0Ae1mA";
+                break;
+            default:
+                alert("啊哦，没有想找的界面~");
+        }
+    </script>
+</body>
