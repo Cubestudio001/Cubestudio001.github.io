@@ -46,9 +46,11 @@
     <button class="devloping">DotBeater</button><br>
     <button onclick="eatsb()" class="ok">吃田睦枫</button><br>
     <button onclick="github()" class="ok">GitHub Open-Source Page</button><br>
-    <button class="devloping">Phigros 模拟器</button>
+    <button onclick="eatDaizou()" class="ok">吃掉大佐</button>
     <script>
-        
+        function eatDaizou(){
+            window.location.href = "eatDaizou/index.html";
+        }
         function eatsb(){
             window.location.href = "eatsb/index.html";
         }
@@ -57,7 +59,6 @@
         }
         $(".devloping").click(function(){
             alert("开发中");
-            $(this).fadeOut("fast");
         })
     </script>
 </body>
