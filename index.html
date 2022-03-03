@@ -40,6 +40,21 @@
             opacity: 60%;
             cursor: not-allowed;
         }
+        .left-buttom {
+            border-color: blue;
+            color: black;
+            border-radius: 20px;
+            width: fit-content;
+            background-color: white;
+            position: fixed;
+            left: 20px;
+            bottom: 50px;
+        }
+        .left-buttom:hover{
+            border-color: white;
+            background-color: blue;
+            color: white;
+        }
     </style>
     <h2>您想去哪里？</h2>
     <br>
@@ -47,6 +62,7 @@
     <button onclick="eatsb()" class="ok">吃田睦枫</button><br>
     <button onclick="github()" class="ok">GitHub Open-Source Page</button><br>
     <button onclick="eatDaizou()" class="ok">吃掉大佐</button>
+    <button onclick="like()" class="left-buttom">表白</button>
     <script>
         function eatDaizou(){
             window.location.href = "eatDaizou/index.html";
@@ -60,6 +76,9 @@
         $(".devloping").click(function(){
             alert("开发中");
         })
+        function like(){
+            alert("54mb54Wc5am377yM5oiR5Zac5qyi5L2g");
+        }
     </script>
 </body>
 </html>
