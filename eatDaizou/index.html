@@ -46,8 +46,13 @@
                         </ul>
                     </div>
                     <br/>
-                    <a class="btn btn-secondary btn-lg" onclick="show_setting()">游戏设置</a>
+                    <a class="btn btn-secondary btn-lg" onclick="to_tmf()">回到首页</a>
                 </div>
+                <script>
+                    function to_tmf(){
+                        window.location.href = "../index.html";
+                    }
+                </script>
                 <div id="setting" style="display: none;">
                     <div class="container mb-3">
                         <input type="button" class="btn btn-secondary btn-lg" onclick="getClickBeforeImage()" value="设置点击前的图" style="left: 0">
