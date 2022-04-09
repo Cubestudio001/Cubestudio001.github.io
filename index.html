@@ -7,6 +7,7 @@
         body {
             background-color: #75b5da;
             background-image: linear-gradient(to right, rgb(0, 162, 255) , rgb(0, 89, 255), rgb(0, 162, 255));
+            max-width: 1920px;
         }
     </style>
     <script src="scr/jq.js"></script>
@@ -59,7 +60,7 @@
     <h2>您想去哪里？</h2>
     <br>
     <button class="devloping">DotBeater</button><br>
-    <button onclick="eatsb()" class="ok">吃田睦枫</button><br>
+    <button onclick="eatsb()" class="ok">吃???</button><br>
     <button onclick="github()" class="ok">GitHub Open-Source Page</button><br>
     <button onclick="eatDaizou()" class="ok">吃掉大佐</button>
     <button onclick="like()" class="left-buttom">表白</button>
@@ -77,21 +78,37 @@
             alert("开发中");
         })
         function like(){
-            alert("54mb54Wc5am377yM5oiR5Zac5qyi5L2g");
+            window.location.href="funnyInSchool.html";
         }
     </script>
-    <video width="320" height="240" controls="controls" class="side-video">
-        <source src="scr/ambully.mp4" type="video/mp4" />
-      </video>
-    
-    <strong style="position: fixed; top: 250px;left: 20px;">作者：赵一诺<br>欢迎投稿</strong>
-    <style>
-        .side-video{
+ 
+    <marquee scrolldelay="40" scrollamount="7" width="100%" class="buttom-roll" behavior="scroll " direction="left">
+            欢迎来到CubeStudio Demo Page         
+               
+            更新日志：2020/4/9 &emsp;&emsp; 1.吃掉田睦枫更新为吃掉屈南希&emsp;&emsp;2.加入了此横幅&emsp;&emsp;
+            3.更新了《表白》按钮，快去左下角试试看吧
+            &emsp;&emsp;&emsp;&emsp;
             
+            &emsp;&emsp;投稿邮箱：cubemode@163.com(请标注标题和作者(默认为邮箱名))
+            &emsp;&emsp;&emsp;&emsp;
+            哦对了，有Github账号的朋友们别忘了点击上方Github Open-Source Page给我一个Star哦！
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            你还在看吗？
+            &emsp;&emsp;&emsp;
+            好吧，其实……
+            &emsp;&emsp;&emsp;&emsp;
+            你还可以向投稿视频的邮箱投稿照片，没准照片里的人就是游戏里的下一个人🌝
+            &emsp;&emsp;
+    </marquee>
+ 
+    <style>
+        .buttom-roll{
+            background-color: pink;
             position: fixed;
-            top: 10px;
-            left: 10px;
+            bottom: 99px;
+            left:0px;
         }
     </style>
+
 </body>
 </html>

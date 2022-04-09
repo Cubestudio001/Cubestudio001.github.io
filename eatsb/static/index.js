@@ -401,12 +401,12 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
         }
         // TODO 添加反馈
         if (mode === MODE_ENDLESS) return '';
-        if (score <= 39) return "田睦枫很生气";
-        if (score <= 69) return '还行';
-        if (score <= 99) return '好';
-        if (score <= 149) return '很好';
-        if (score <= 179) return '田睦枫很欣赏你的手速';
-        return '田睦枫爱你';
+        if (score <= 19) return "妹夫（？";
+        if (score <= 49) return '注意影响';
+        if (score <= 79) return '差不多得了😅';
+        if (score <= 109) return 'Nice';
+        if (score <= 179) return '好快';
+        return '？';
     }
 
     function toStr(obj) {

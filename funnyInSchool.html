@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>彩蛋界面</title>
+</head>
+<body>
+    <a style="color: white;">我叫袁一淇，我喜欢屈南希</a>
+    <br>
+    <a>我叫</a>
+    <a id="me">example1</a>
+    <a>,</a>
+    <a>我喜欢</a>
+    <a id="like">example2</a>
+    <input type="button" value="自定义" onclick="askForSentenceInput()"/>
+    <br>
+    <a>实例按钮</a>
+    <input type="button" value="《经典老番》" onclick="exampleYYQ()"/>
+    <script>
+        function askForSentenceInput(){
+            var e1 = prompt("谁");
+            var e2 = prompt("喜欢谁");
+            document.getElementById("me").innerHTML =  e1;
+            document.getElementById("like").innerHTML = e2;
+        };
+        function exampleYYQ(){
+            document.getElementById("me").innerHTML =  "袁一淇";
+            document.getElementById("like").innerHTML = "屈南希";
+        };
+    </script>
+</body>
+</html>
