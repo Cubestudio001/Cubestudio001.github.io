@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <title>CubeStudio</title>
-    
+    <script src="/scr/search.js"></script>
 </head>
 <body>
     <div class="background-image"><!--背景图片--></div>
@@ -13,18 +13,13 @@
             position: fixed;
             left: 0px;
             top: 0px;
-            background: url(https://api.xygeng.cn/Bing/) no-repeat center center;
+           background: url(https://api.xygeng.cn/Bing/) no-repeat center center;
             background-color: black;
             filter: blur(5px);
             transform: scale(1.1);
             z-index: 1;
+            
         }
-    </style>
-    <div class="top">
-    <a style="font-size: large; position: absolute; top: 5px;left: 7px; font-family:'Courier New', Courier, monospace; color: black; z-index: 10;">CubeStudio</p>
-   
-    </div>
-    <style>
         .top{
             background-color: aqua;
             width: 100vw;
@@ -34,10 +29,65 @@
             left: 0;
             z-index: 1;
         }
-        
     </style>
+    <div class="top">
+    <a style="font-size: large; position: absolute; top: 5px;left: 7px; font-family:'Courier New', Courier, monospace; color: black; z-index: 10;">CubeStudio</p>
+   <!--
+    </div>
     <strong id="we-arent-ready-big" style="position: fixed;top: 47vh;left: 43vw;font-size: xx-large;z-index: 50;">新首页准备中</strong>
     <p id="we-arent-ready-small" style="position: fixed;top: 51vh;left: 48vw;font-size: small; z-index: 50;">稍后回来</p>
-    <div style="background-color: white;width: 500px; height: 145px; position: fixed; top: 41vh; left:32vw;z-index: 2; filter: blur(10px);opacity:0.8"></div>
+    <div style="background-color: white;width: 500px; height: 145px; position: fixed; top: 41vh; left:32vw;z-index: 2; filter: blur(10px);opacity:0.8"></div>-->
     
+   
+        
+
+    <!--搜索框-->
+    <div class="search">
+        <form method="GET" action="test.htm">
+			<input id="-input" type="text" name="input_search" placeholder="目前只支持Bing..."><br>
+			<input id="-button" type="submit" value="搜索">
+        </form>
+        
+    </div>
+    <style>
+        .search{
+            position: fixed;
+            left: 33vw;
+            top: 45vh;
+        }
+        .search #-input{
+            width: 500px;
+            height: 30px;
+            border-radius: 15px;
+            line-height: 25px;
+        }
+        .search #-button{
+            position: absolute;
+            left:200px;
+            top:100px;
+            border-radius: 10px;
+            width: 100px;
+            height: 30px;
+            background-color: white;
+            color: black;
+            transition-duration: 200ms;
+        }
+        .search #-button:hover{
+            background-color: black;
+            color: white
+        }
+        #old{
+            text-decoration: none;
+            color: rgb(46, 155, 155);
+            transition-duration: 50ms;
+        }
+        #old:hover{
+            color: rgb(145, 113, 55);
+        }
+        #old:visited{
+            color: rgb(43, 56, 131);
+        }
+    </style>
+    
+    <a href="game.html" style="position: fixed; bottom: 200px;left: 47vw;"id="old">旧首页</a>
 </body>
