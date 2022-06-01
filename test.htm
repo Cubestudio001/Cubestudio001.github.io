@@ -10,21 +10,11 @@
         
         var after_q = window.location.search;
         var actually_target = after_q.split("=");
-        var go_to_game = [/吃掉/,/开源/,/eat/i,/屈南希/,/田睦枫/,/game/i,/表白/,/袁一淇/,/dazuo/i,/\w*(qu|tian)\w*(nan|mu)\w*(xi|feng)\w*/i,/大佐/];
-        var go_to_bilibili = [/ccr/i,/cubemode/i,/cubestudio/i];
-        go_to_bilibili.forEach(element => {
-            if (element.test(actually_target[1])){
-                location.href="/redirect.html?bilibili";
-                return 1;
+        if(actually_target[1]=="成品照片")
+            {
+                window.location.href="/scr/final.jpg";
             }
-        });
-        go_to_game.forEach(element =>{
-            if (element.test(actually_target[1])){
-                location.href="/game.html";
-                return 1;
-            }
-        })
-        window.location = "https://bing.com/search?q="+actually_target[1];
+        else window.location = "https://bing.com/search?q="+actually_target[1];
     </script>
 </body>
 </html>
