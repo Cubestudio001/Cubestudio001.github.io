@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入年龄</title>
+    <script src="/scr/jq.js"></script>
+    <script src="/scr/jq.cookie.js"></script>
+</head>
+<body>
+    <input type="date" id="date">
+    <input type="submit" onclick="set()">
+    <script>
+        function set(){
+            selected = new Date($("#date").val() + " 0:00");
+            today = new Date();
+            if(selected<today){
+                $.cookie("day",$("#date").val() + " 0:00",{expires:14,path:"/birthday"});
+                $(location).attr('href','index.html');
+            }
+            else{
+                alert("您不能在未来出生！");
+            }
+        }
+    </script>
+</body>
+</html>

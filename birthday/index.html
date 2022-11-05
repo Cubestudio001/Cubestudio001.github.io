@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <script src="/scr/jq.js"></script>
+    <script src="/scr/jquery.cookie.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <title>您的年龄</title>
+    <style>
+        body{
+            background-color: rgb(74, 74, 74);
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <p class="text-center text-white" style="font-size: xx-large;">您当前的年龄是</p>
+    </div>
+    <div class="container my-5">
+        <p class="text-center text-white" style="font-size: xx-large;" id="main">0.00000000</p>
+    </div>
+    <div style="text-align: center;">
+        <button type="button" class="btn btn-primary" onclick="$(location).attr('href','setting.html')">设置</button>
+    </div>
+    <script>
+        var selected;
+        if($.cookie("day")!=null&&$.cookie("day")!="null"){
+            selected = new Date($.cookie("day"));
+        }
+        else{
+            alert("您还没有设置您的生日！请点击下方按钮设置")
+        }
+
+        today = new Date();
+        var leapyear=0;
+        for(i = selected.getFullYear()+1;i<today.getFullYear();i++){
+            if(i%4==0&&i%400!=0){
+                leapyear++;
+            }
+            else if(i%100==0&&i%400!=0){
+                leapyear++;
+            }
+        }
+        selected.setDate(selected.getDate()+leapyear);
+        $(document).ready(function(){
+            setInterval(update,3000);
+        })
+
+        function update(){
+            var today=new Date();
+            var val=(today-selected)/1000/60/60/24/365;
+            $("#main").fadeTo("fast",0,function(){
+                $("#main").text(val);
+                $("#main").fadeTo("fast",1);
+            });
+        }
+    </script>
+</body>
+</html>
