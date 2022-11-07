@@ -34,12 +34,24 @@
 
         today = new Date();
         var leapyear=0;
-        for(i = selected.getFullYear()+1;i<today.getFullYear();i++){
-            if(i%4==0&&i%400!=0){
-                leapyear++;
+        if(selected.getMonth<=2){
+            for(i = selected.getFullYear();i<today.getFullYear();i++){
+                if(i%4==0&&i%400!=0){
+                    leapyear++;
+                }
+                else if(i%100==0&&i%400!=0){
+                    leapyear++;
+                }
             }
-            else if(i%100==0&&i%400!=0){
-                leapyear++;
+        }
+        else{
+            for(i = selected.getFullYear()+1;i<today.getFullYear();i++){
+                if(i%4==0&&i%400!=0){
+                    leapyear++;
+                }
+                else if(i%100==0&&i%400!=0){
+                    leapyear++;
+                }
             }
         }
         selected.setDate(selected.getDate()+leapyear);
