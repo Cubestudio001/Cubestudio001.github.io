@@ -3,9 +3,9 @@ var selected;
             selected = new Date($.cookie("day"));
         }
         else{
-            alert("您还没有设置您的生日！请点击下方按钮设置")
+            alert("您还没有设置您的生日！请点击下方按钮设置");
+            $("#cookiealert").hide();
         }
-
         today = new Date();
         var leapyear=0;
         if(selected.getMonth<=2){

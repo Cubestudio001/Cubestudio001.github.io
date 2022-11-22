@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>输入年龄</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
     <script src="/scr/jq.js"></script>
-    <script src="/scr/jq.cookie.js"></script>
+    <script src="/scr/jquery.cookie.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+    <div class="container-xl" style="text-align: center;">
     <input type="date" id="date">
     <input type="submit" onclick="set()">
+    </div>
     <script>
         function set(){
             selected = new Date($("#date").val() + " 0:00");
