@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
     <script src="/scr/jq.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <title>CubeStudio</title>
 </head>
 <body style="background-color: rgb(220, 220, 220);">
     <nav class="navbar navbar-light bg-light" style="height: auto;">
@@ -14,7 +15,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link" aria-current="page" href="/birthday/">实时年龄</a>
+              <a class="nav-link text-warning" href="/catchup">崩溃游戏</a>
+              <a class="nav-link" href="/birthday/">实时年龄</a>
               <a class="nav-link" href="/legecy/">Legacy</a>
               <a class="nav-link disabled">Judge Engine/Backrooms:Rebel</a>
               <div class="dropdown">
@@ -25,7 +27,7 @@
                     <li><a class="dropdown-item" href="https://github.com/Cubestudio001/Cubestudio001.github.io/tree/main/birthday" title="实时年龄是本网站的一部分">实时年龄</a></li>
                 </ul>
               </div>
-              <a class="nav-link">&ensp;&ensp;&ensp;</a>
+              <a class="nav-link">&ensp;</a>
               <div class="dropdown">
                 <a class="nav-link btn btn-secondary dropdown-toggle" href="#" id="vids" data-bs-toggle="dropdown" aria-expanded="false">Video</a>
                 <ul class="dropdown-menu" aria-labelledby="vids">
@@ -38,9 +40,10 @@
             </div>
             </nav>
     </nav>
-    <div class="container-fluid">
+    <div class="container-fluid" style="text-align: center;">
         <p class="text-center text-primary" style="font-size: 55px;">CubeStudio</p>
         <br>
+        <button class="btn btn-outline-danger" onclick="dontClicke()">内测/千万别点</button>
         <p class="text-center" style="color:rgb(0,155,240)">请点击上方导航栏去往想去的地方</p>
         <p class="text-center" id="poison">IP ADDR</p>
     </div>
@@ -56,5 +59,10 @@
                 }
             })
         })
+        dontClicke = () => {
+            alert("在您点击确定后，我们将不会对页面正常负责");
+            alert("您即将跳转至外部页面参与我们的讨论");
+            window.location.href="https://new.swift-il.com/";
+        }
     </script>
 </body>

@@ -1,106 +1,118 @@
 <!DOCTYPE html>
+
 <head>
-    <meta charset="utf-8">
-    <title>CubeStudio</title>
-    <script src="/scr/search.js"></script>
+    <meta charset="UTF-8">
+    <title>Regist to CubeStudio</title>
+    <style>
+        body {
+            background-color: #75b5da;
+            background-image: linear-gradient(to right, rgb(0, 162, 255) , rgb(0, 89, 255), rgb(0, 162, 255));
+            max-width: 1920px;
+        }
+    </style>
+    <script src="scr/jq.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="background-image"><!--背景图片--></div>
+    <p class="login-board-title" style="width:auto;">Coming Soon</h1>
     <style>
-        .background-image {
-            width:100vw;
-            height:100vh;
-            position: fixed;
-            left: 0px;
-            top: 0px;
-           background: url(scr/homepage.jpg) no-repeat center center;
-            background-color: black;
-            filter: blur(5px);
-            transform: scale(1.1);
-            z-index: 1;
+        *{
+            position: relative;
+            left: 15%;
             
         }
-        .top{
-            background-color: aqua;
-            width: 100vw;
-            height: 25px;
-            position: absolute;
-            top: 0px;
-            left: 0;
-            z-index: 1;
+        .login-board-title{
+            font-family: "Lucida Console", Monaco, monospace;
         }
-    </style>
-    <div class="top">
-    <a style="font-size: large; position: absolute; top: 5px;left: 7px; font-family:'Courier New', Courier, monospace; color: black; z-index: 10;">CubeStudio</p>
-   <!--
-    </div>
-    <strong id="we-arent-ready-big" style="position: fixed;top: 47vh;left: 43vw;font-size: xx-large;z-index: 50;">新首页准备中</strong>
-    <p id="we-arent-ready-small" style="position: fixed;top: 51vh;left: 48vw;font-size: small; z-index: 50;">稍后回来</p>
-    <div style="background-color: white;width: 500px; height: 145px; position: fixed; top: 41vh; left:32vw;z-index: 2; filter: blur(10px);opacity:0.8"></div>-->
-    
-   
-        
-
-    <!--搜索框-->
-    <div class="search">
-        <form method="GET" action="test.htm">
-			<input id="-input" type="text" name="input_search" placeholder="目前只支持Bing..."><br>
-			<input id="-button" type="submit" value="搜索">
-        </form>
-        
-    </div>
-    <style>
-        .search{
-            position: fixed;
-            left: 33vw;
-            top: 45vh;
-        }
-        .search #-input{
-            width: 500px;
-            border: white solid;
-            height: 30px;
-            border-radius: 15px;
-            line-height: 25px;
-            background-color: rgba(0, 217, 255, 0);
-            transition-duration: 150ms;
-            color: white;
-        }
-        .search #-input:hover{
-            background-color: white;
-            color: darkred;
-        }
-        .search #-input:focus{
-            background-color: white;
-            color:black;
-        }
-        .search #-button{
-            position: absolute;
-            left:200px;
-            top:100px;
+        button{
+            left: 12%;
             border-radius: 10px;
-            border: white  solid;
-            width: 100px;
-            height: 30px;
-            background-color: rgba(0, 217, 255, 0);
-            color: white;
+            -webkit-transition-duration: 200ms;
             transition-duration: 200ms;
+            color: rgb(153, 0, 200);
+            background-color: rgb(0, 255, 85);
         }
-        .search #-button:hover{
+        .ok:hover{
+            color:rgb(0, 132, 255);
+            background-color: rgb(0, 255, 213);
+            font-size: x-large;
+        }
+        .devloping{
+            opacity: 60%;
+            cursor: not-allowed;
+        }
+        .left-buttom {
+            border-color: blue;
+            color: black;
+            border-radius: 20px;
+            width: fit-content;
             background-color: white;
-            color: black
+            position: fixed;
+            left: 20px;
+            bottom: 50px;
         }
-        #old{
-            text-decoration: none;
-            color: rgb(46, 155, 155);
-            transition-duration: 50ms;
-        }
-        #old:hover{
-            color: rgb(145, 113, 55);
-        }
-        #old:visited{
-            color: rgb(43, 56, 131);
+        .left-buttom:hover{
+            border-color: white;
+            background-color: blue;
+            color: white;
         }
     </style>
-    
-    <a href="game.html" style="position: fixed; bottom: 20vh;left: 47vw;"id="old">旧首页</a>
+    <h2>您想去哪里？</h2>
+    <br>
+    <button class="devloping">DotBeater</button><br>
+    <button onclick="eatsb()" class="ok">吃???</button><br>
+    <button onclick="github()" class="ok">GitHub Open-Source Page</button><br>
+    <button onclick="eatDaizou()" class="ok">吃掉大佐</button>
+    <button onclick="like()" class="left-buttom">表白</button>
+    <button class="left-buttom" onclick="newhomepage()">新首页</button>
+    <script>
+        function eatDaizou(){
+            window.location.href = "eatDaizou/index.html";
+        }
+        function eatsb(){
+            window.location.href = "eatsb/index.html";
+        }
+        function github(){
+            window.location.href = "https://github.com/Cubestudio001/Cubestudio001.github.io";
+        }
+        $(".devloping").click(function(){
+            alert("开发中");
+        })
+        function like(){
+            window.location.href="funnyInSchool.html";
+        }
+        function newhomepage(){
+            window.location.href = "index.html";
+        }
+    </script>
+ 
+    <marquee scrolldelay="40" scrollamount="7" width="100%" class="buttom-roll" behavior="scroll " direction="left">
+            欢迎来到CubeStudio Demo Page         
+               
+            更新日志：2020/4/9 &emsp;&emsp; 1.吃掉田睦枫更新为吃掉屈南希&emsp;&emsp;2.加入了此横幅&emsp;&emsp;
+            3.更新了《表白》按钮，快去左下角试试看吧
+            &emsp;&emsp;&emsp;&emsp;
+            
+            &emsp;&emsp;投稿邮箱：cubemode@163.com(请标注标题和作者(默认为邮箱名))
+            &emsp;&emsp;&emsp;&emsp;
+            哦对了，有Github账号的朋友们别忘了点击上方Github Open-Source Page给我一个Star哦！
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            你还在看吗？
+            &emsp;&emsp;&emsp;
+            好吧，其实……
+            &emsp;&emsp;&emsp;&emsp;
+            你还可以向投稿视频的邮箱投稿照片，没准照片里的人就是游戏里的下一个人🌝
+            &emsp;&emsp;
+    </marquee>
+ 
+    <style>
+        .buttom-roll{
+            background-color: pink;
+            position: fixed;
+            bottom: 99px;
+            left:0px;
+        }
+    </style>
+
 </body>
+</html>

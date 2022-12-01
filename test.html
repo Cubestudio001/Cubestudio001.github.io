@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>1</title>
+    <script src="/scr/jq.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <script src="/scr/jq.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#changeNumModal">
+    Launch demo modal
+    </button>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="changeNumModal" tabindex="-1" aria-labelledby="changeNumModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="changeNumModalLabel">更改当前可出牌数字</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        <select class="form-select" aria-label="changeNum">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="setlast()">确认更改</button>
+    </div>
+    </div>
+    </div>
+    </div>
+</body>

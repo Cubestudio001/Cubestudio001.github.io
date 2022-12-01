@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏成果</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <script src="/scr/jq.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2 class="text-warning text-center" style="font-size: 48px;" id="title">您失败/成功了</h2>
+        <p class="text-center" id="text">原因是</p>
+    </div>
+    <script>
+        $(document).ready(function(){
+        switch(window.location.search){
+            case "?pr":
+                $("#title").text("您失败了");
+                $("#text").text("原因是:您认输了");
+                break;
+            case "?pag":
+                $("#title").text("您成功了");
+                $("#text").text("原因是:您已出完所有手牌");
+                break;
+            case "?obag":
+                $("#title").text("您失败了");
+                $("#text").text("原因是:您的一个敌人出完了所有手牌");
+                break;
+            case "?pc":
+                $("#title").text("您失败了");
+                $("#text").text("原因是:您崩溃太多次了");
+                break;
+            case "?bc":
+                $("#title").text("您成功了");
+                $("#text").text("原因是:您的一个对手崩溃次数太多了");
+                break;
+            default:
+                document.write("Request Denied");
+                break;
+        }})
+    </script>
+</body>
+</html>

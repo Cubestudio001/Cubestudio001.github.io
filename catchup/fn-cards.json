@@ -1,0 +1,14 @@
+{
+    "_1":{
+        "name":"铝铜",
+        "description":"将可出牌的数字改为指定的数字",
+        "function":"changeToSel()",
+        "image":"zyc.jpg"
+    },
+    "_2":{
+        "name":"另一个铝铜",
+        "description":"让所有对手立刻崩溃一次",
+        "function":"othersCrushDownNow()",
+        "image":"kyt.jpg"
+    }
+}

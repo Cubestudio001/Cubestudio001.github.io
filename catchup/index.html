@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <title>崩溃</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light" style="height: auto;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="/favicon.ico" class="img-fluid" style="height:30px"/>CubeStudio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link text-warning text-primary" href="#">崩溃游戏</a>
+              <a class="nav-link" href="/birthday/">实时年龄</a>
+              <a class="nav-link" href="/legecy/">Legacy</a>
+              <a class="nav-link disabled">Judge Engine/Backrooms:Rebel</a>
+              <div class="dropdown">
+                <a class="nav-link btn btn-secondary dropdown-toggle" href="#" id="openSources" data-bs-toggle="dropdown" aria-expanded="false" title="本网站开源且使用了部分开源软件">开源</a>
+                <ul class="dropdown-menu" aria-labelledby="openSources">
+                    <li><a class="dropdown-item" href="https://github.com/Cubestudio001/Cubestudio001.github.io">网站</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/arcxingye/EatKano">Legecy/EatCano</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/Cubestudio001/Cubestudio001.github.io/tree/main/birthday" title="实时年龄是本网站的一部分">实时年龄</a></li>
+                </ul>
+              </div>
+              <a class="nav-link">&ensp;</a>
+              <div class="dropdown">
+                <a class="nav-link btn btn-secondary dropdown-toggle" href="#" id="vids" data-bs-toggle="dropdown" aria-expanded="false">Video</a>
+                <ul class="dropdown-menu" aria-labelledby="vids">
+                    <li><a class="dropdown-item" href="https://space.bilibili.com/177150108">bilibili</a></li>
+                    <li><a class="dropdown-item" href="https://www.ixigua.com/home/97256564533">Xigua</a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+            </div>
+            </nav>
+    </nav>
+    <div class="container-fluid">
+        <h1 class="text-primary text-center">欢迎来到崩溃</h1>
+        <div class="accordion w-100" id="introduce">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="welcoming">
+                    <button class="accordion-button text-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="welcoming">
+                        欢迎！
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="welcoming" data-bs-parent="#introduce">
+                    <div class="accordion-body">
+                        <strong>欢迎来到崩溃！</strong>请务必在游玩前阅读指示以了解玩法
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="basic">
+                    <button class="accordion-button text-center" type="button" data-bs-toggle="collapse" data-bs-target="#basic-child" aria-expanded="false" aria-controls="basic">
+                        基本玩法
+                    </button>
+                </h2>
+                <div id="basic-child" class="accordion-collapse collapse show" aria-labelledby="basic" data-bs-parent="#introduce">
+                    <div class="accordion-body">
+                        <p class="text-info">本游戏玩法与UNO较为<strong>相似</strong>，了解UNO的玩法有助于您了解本游戏玩法。</p>
+                        <p>本游戏由四名玩家参赛——您和三个机器人(与其他玩家对战将在未来推出),每个玩家初始拥有10张手牌，每张手牌样式如下所示</p><br>
+                        <div class="card" style="width: 18rem; height: 18rem;">
+                            <div class="card-top" style="text-align: center;"><h3 style="color: blue;">6</h3></div>
+                            <div class="card-body">
+                                <h5 class="card-title">蓝6</h5>
+                                <p class="card-text">这是一个基础牌的例子<br>它的上一张牌必须是6或者蓝色</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary" style="cursor: not-allowed;" disabled>出牌</button>
+                            </div>
+                        </div>
+                        上方是一个基础牌的例子，它由一个数字和颜色构成
+                        <div class="card" style="width: 18rem;height: 18rem;">
+                            <div style="text-align: center;"><img src="images/zyc.jpg" class="card-img-top" style="width: 100px; height: 100px; " alt="..."></div>
+                            <div class="card-body">
+                            <h5 class="card-title">铝铜</h5>
+                            <p class="card-text">这是一张技能/干员牌的例子<br>将可出牌的数字改为指定的数字</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="btn btn-primary" style="cursor: not-allowed;" disabled>出牌</button>
+                            </div>
+                        </div>
+                        上方是一个技能/干员牌的例子，它们会是您对战中的好助手<br>
+                        <p>您的初始牌由8张基础牌和2张技能/干员牌构成</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="goingout">
+                    <button class="accordion-button text-center" type="button" data-bs-toggle="collapse" data-bs-target="#go-out" aria-expanded="false" aria-controls="goingout">
+                        出牌
+                    </button>
+                </h2>
+                <div id="go-out" class="accordion-collapse collapse show" aria-labelledby="goingout" data-bs-parent="#introduce">
+                    <div class="accordion-body">
+                        第一位出牌的玩家可以出任意基础牌
+                        <br><br>
+                        从第二位玩家开始，出的牌应当是符合要求的基础牌或技能/干员牌
+                        <br><br>
+                        <strong>对于基础牌，</strong>您出的牌应当与上一个人出的牌同一个数字或颜色，例如上一个人出的是绿4，则您可以出任意颜色的4或任意数字的绿色牌
+                        <br>
+                        <strong>对于技能/干员牌，</strong>出牌条件一般会在牌面上注明，没有注明的则可以在任何条件下出牌。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="events-and-winning">
+                    <button class="accordion-button text-center" type="button" data-bs-toggle="collapse" data-bs-target="#e-win" aria-expanded="false" aria-controls="events-and-winning">
+                        事件及胜负判断
+                    </button>
+                </h2>
+                <div id="e-win" class="accordion-collapse collapse show" aria-labelledby="events-and-winning" data-bs-parent="#introduce">
+                    <div class="accordion-body">
+                        <strong>崩溃事件</strong>
+                        <br>
+                        当您手中没有可以出的牌时，您可以选择崩溃。崩溃后，您的手牌无论有多少，立刻更换为8+2的初始状态，在8张初始牌中，保证有两张您可以在本轮出。
+                        不论是否不能出牌，您都可以选择崩溃。
+                        <br><br>
+                        <strong>胜负判断</strong><br>
+                        当有玩家出完他手中的所有牌后，则这名玩家胜利，记第一名，其余玩家将剩余手牌折合为分数计算排名<br>
+                        当有玩家出崩溃17次后，则这名玩家失败，记为最后一名，其余玩家胜利<br>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="ready-and-start">
+                    <button class="accordion-button text-center" type="button" data-bs-toggle="collapse" data-bs-target="#rd-st" aria-expanded="false" aria-controls="ready-and-start">
+                        准备并开始
+                    </button>
+                </h2>
+                <div id="rd-st" class="accordion-collapse collapse show" aria-labelledby="ready-and-start" data-bs-parent="#introduce">
+                    <div class="accordion-body">
+                        如果您准备好了，就点这里<a class="text-warning" href="game.html">开始</a><br><br>
+                        <br>技能/干员牌会随机出现，祝你好运！
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

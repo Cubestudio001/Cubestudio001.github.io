@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>崩溃游戏
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <script src="/scr/jq.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src="game.js"></script>
+    <script src="fn-cards.js"></script>
+</head>
+<body> 
+    <div class="container-fluid p-2" id="main-game">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="card" style="width: 18rem; height:12rem;">
+                    <div class="card-body">
+                        <h3 class="card-title" style="color: rgb(0,255,0);" id="last-title">0</h3>
+                        <p class="card-text" id="last-text">上一个出的出牌是绿0</p>
+                    </div>
+                    <div class="card-footer">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-outline-secondary" onclick="playerRequestCrushDown()">崩溃</button>
+                            <button class="btn btn-outline-danger" onclick="stopNow()">认输并停止游戏</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card" style="width: 18rem; height:12rem;">
+                    <div class="card-body">
+                        <h3 class="card-title" >玩家1</h3>
+                        <p class="card-text" id="player-one-left">剩余--张牌</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>机器人</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card" style="width: 18rem; height:12rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">玩家2</h3>
+                        <p class="card-text" id="player-two-left">剩余--张牌</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>机器人</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="card" style="width: 18rem; height:12rem;">
+                    <div class="card-body">
+                        <h3 class="card-title">玩家3</h3>
+                        <p class="card-text" id="player-three-left">剩余--张牌</p>
+                    </div>
+                    <div class="card-footer">
+                        <p>机器人</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="row h-25"><br></div>
+        <div class="row">
+            <div class="col-*-12">
+                <p class="text-center text-info w-100" id="stats" style="border-style: solid; border-radius: 3px;">您的回合,您已崩溃--次</p>
+            </div>
+        </div>
+        <div class="row"><br></div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;"><h3 style="color: blue;" id="basic-card-1-top">6</h3></div>
+                    <div class="card-body">
+                        <p class="card-title" id="basic-card-1-title">蓝1</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="basic-card-1-btn" onclick="go(BA1)">出牌</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;"><h3 style="color: blue;" id="basic-card-2-top">6</h3></div>
+                    <div class="card-body">
+                        <p class="card-title" id="basic-card-2-title">蓝2</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="basic-card-2-btn" onclick="go(BA2)">出牌</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;"><h3 style="color: blue;" id="basic-card-3-top">6</h3></div>
+                    <div class="card-body">
+                        <p class="card-title" id="basic-card-3-title">蓝3</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="basic-card-3-btn" onclick="go(BA3)">出牌</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;"><h3 style="color: blue;" id="basic-card-4-top">6</h3></div>
+                    <div class="card-body">
+                        <p class="card-title" id="basic-card-4-title">蓝4</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="basic-card-4-btn" onclick="go(BA4)">出牌</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;"><h3 style="color: blue;" id="basic-card-5-top">6</h3></div>
+                    <div class="card-body">
+                        <p class="card-title" id="basic-card-5-title">蓝5</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="basic-card-5-btn" onclick="go(BA5)">出牌</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;" ><h3 style="color: blue;" id="basic-card-6-top">6</h3></div>
+                    <div class="card-body">
+                        <p class="card-title" id="basic-card-6-title">蓝6</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="basic-card-6-btn" onclick="go(BA6)">出牌</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;"><h3 style="color: blue;"  id="basic-card-7-top">6</h3></div>
+                    <div class="card-body">
+                        <p class="card-title" id="basic-card-7-title">蓝7</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary"id="basic-card-7-btn" onclick="go(BA7)">出牌</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;" ><h3 style="color: blue;" id="basic-card-8-top">6</h3></div>
+                    <div class="card-body">
+                        <p class="card-title" id="basic-card-8-title">蓝8</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="basic-card-8-btn" onclick="go(BA8)">出牌</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;"><img src="images/zyc.jpg" style="height: 60px;width: 60px;" id="f-card-1-top"></div>
+                    <div class="card-body">
+                        <p class="card-title" id="f-card-1-title">技能/干员1</p>
+                        <p class="card-text" id="f-card-1-text">Useful</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="f-card-1-btn" onclick="go(FN1)">出牌</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 14rem;height: 14rem;">
+                    <div class="card-top" style="text-align: center;"><img src="images/zyc.jpg" style="height: 60px;width: 60px;" id="f-card-2-top"></div>
+                    <div class="card-body">
+                        <p class="card-title" id="f-card-2-title">技能/干员2</p>
+                        <p class="card-text" id="f-card-2-text">Useful</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" id="f-card-2-btn" onclick="go(FN2)">出牌</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="changeNumModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"  aria-labelledby="changeNumModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="changeNumModalLabel">更改当前可出牌数字</h5>        </div>
+        <div class="modal-body">
+            <select class="form-select" aria-label="changeNum" id="changeNumSelector">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="setLast()">确认更改</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(()=>{
+            giveCard();
+            updateLeftCardDisplay();
+        })
+    </script>
+</body>
+</html>
