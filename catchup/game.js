@@ -21,7 +21,7 @@ intervalRandomJudge = () =>{
     let rd = [RED,GREEN,YELLOW,BLUE];
     if(timeFlag>=3&&goingPlayer!=0){
         let crush_or_go = Math.random();
-        if(crush_or_go>=0.85){
+        if(crush_or_go>=0.843956){
             switch(goingPlayer){
                 case 1:
                     playerOneHold=10;
@@ -319,12 +319,12 @@ function winOrLoseJudge(){
     if(oneBotAllGo){
         window.location.href="checkout.html?obag";
     }
-    if(crushedTimes>=17){
+    if(crushedTimes>=6){
         window.location.href="checkout.html?pc"
     }
-    if(playerOneCrushed>=17||
-       playerTwoCrushed>=17||
-       playerThreeCrushed>=17 
+    if(playerOneCrushed>=6||
+       playerTwoCrushed>=6||
+       playerThreeCrushed>=6 
     ){
         window.location.href="checkout.html?bc";
     }
