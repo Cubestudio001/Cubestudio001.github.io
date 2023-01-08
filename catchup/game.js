@@ -130,8 +130,8 @@ giveCard = () => {
         playerNowCardList[i]=new BasicCards(color,number_randomer);
     }
     //技能牌
-    playerNowCardList[8]='_'+Math.ceil((Math.random()*2)).toString();
-    playerNowCardList[9]='_'+Math.ceil((Math.random()*2)).toString();
+    playerNowCardList[8]='_'+Math.ceil((Math.random()*4)).toString();
+    playerNowCardList[9]='_'+Math.ceil((Math.random()*4)).toString();
 }
 
 //更新其他玩家剩余卡数量
