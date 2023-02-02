@@ -1,0 +1,34 @@
+<nav class="navbar navbar-light bg-light" style="height: auto;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="/favicon.ico" class="img-fluid" style="height:30px"/>CubeStudio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link text-warning text-primary" href="#">崩溃游戏</a>
+          <a class="nav-link" href="/birthday/">实时年龄</a>
+          <a class="nav-link" href="/blog/">Blog</a>
+          <a class="nav-link disabled">Judge Engine/Backrooms:Rebel</a>
+          <div class="dropdown">
+            <a class="nav-link btn btn-secondary dropdown-toggle" href="#" id="openSources" data-bs-toggle="dropdown" aria-expanded="false" title="本网站开源且使用了部分开源软件">开源</a>
+            <ul class="dropdown-menu" aria-labelledby="openSources">
+                <li><a class="dropdown-item" href="https://github.com/Cubestudio001/Cubestudio001.github.io">网站</a></li>
+                <li><a class="dropdown-item" href="https://github.com/arcxingye/EatKano">Legecy/EatCano</a></li>
+                <li><a class="dropdown-item" href="https://github.com/Cubestudio001/Cubestudio001.github.io/tree/main/birthday" title="实时年龄是本网站的一部分">实时年龄</a></li>
+            </ul>
+          </div>
+          <a class="nav-link">&ensp;</a>
+          <div class="dropdown">
+            <a class="nav-link btn btn-secondary dropdown-toggle" href="#" id="vids" data-bs-toggle="dropdown" aria-expanded="false">Video</a>
+            <ul class="dropdown-menu" aria-labelledby="vids">
+                <li><a class="dropdown-item" href="https://space.bilibili.com/177150108">bilibili</a></li>
+                <li><a class="dropdown-item" href="https://www.ixigua.com/home/97256564533">Xigua</a></li>
+            </ul>
+          </div>
+        </div>
+        </div>
+        </div>
+        </nav>
+</nav>
