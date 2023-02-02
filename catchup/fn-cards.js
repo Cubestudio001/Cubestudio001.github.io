@@ -12,3 +12,7 @@ function othersCrushDownNow(){
     playerTwoCrushed++;
     playerThreeCrushed++;
 }
+
+function changeToYellow(){
+    lastCard = new BasicCards(YELLOW, lastCard.getCount());
+}

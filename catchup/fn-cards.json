@@ -10,5 +10,17 @@
         "description":"让所有对手立刻崩溃一次",
         "function":"othersCrushDownNow()",
         "image":"kyt.jpg"
+    },
+    "_3":{
+        "name":"GB之王",
+        "description":"将可出的牌的颜色改为黄",
+        "function":"changeToYellow()",
+        "image":"xly.png"
+    },
+    "_4":{
+        "name":"Rapper",
+        "description":"重新获得手牌且不崩溃",
+        "function":"giveCard()",
+        "image":"zyn.png"
     }
 }
