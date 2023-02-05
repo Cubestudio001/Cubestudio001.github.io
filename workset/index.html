@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <script src="/scr/jq.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src="/scr/jq.cookie.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>作品集</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">CubeStudio</a>
+
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/index.html">网站首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        文章直达
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./docs/doc1.pdf">此中有真意</a></li>
+                        <li><a class="dropdown-item" href="./docs/doc2.pdf">劳动，让我自豪</a></li>
+                        <li><a class="dropdown-item" href="./docs/doc3.pdf">窗外</a></li>
+                        <li><a class="dropdown-item" href="./docs/doc4.pdf">你如同那一本书</a></li>
+                        <li><a class="dropdown-item" href="./docs/doc5.pdf">我用毅力书写青春</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="./docs/ct.pdf"><i>最后的告别</i></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <div id="before" class="container w-75 p-3 text-light">
+        <h4>序</h4>
+        <p>这里是序</p>
+        <button class="btn btn-outline-light" id="continue_b" onclick="next()">点击继续</button>
+        <div id="circle"></div>
+    </div>
+    <div class="container w-75 p-3" id="main">
+        <h3 id="top-title" class="text-white p-3"><i>作文集</i></h3>
+        <a href="javascript:$.cookie('read',null);location.reload()"  class="btn btn-outline-primary">显示序</a>
+        <div class="card bg-dark w-100 text-light">
+            <div class="card-body">
+                <h5 class="card-title">此中有真意</h5>
+                <p class="card-text p-2">生活繁杂间，往往夹杂着平淡却又珍贵十分珍贵的人间真情。它们时常、感动着我们，给予我们力量与动力。只是往往待到我们想感恩时，总是“欲辩已忘言”。<br>——题记…… </p>
+                <p class="card-text"><i>作为期末考试的一部分，这个题目总是让人闻风丧胆。经过数次修改，它能否使人眼前一亮？</i></p>
+                <a href="./docs/doc1.pdf" class="card-link">查看全文</a>
+            </div>
+        </div>
+        <br>
+        <div class="card bg-dark w-100 text-light">
+            <div class="card-body">
+                <h5 class="card-title">劳动，让我自豪</h5>
+                <p class="card-text p-2">雪花纷飞，操场上，耳畔响彻着同学们的歌声和我的“劳动成果”。那一刻，我感到十分自豪……</p>
+                <p class="card-text"><i>根据真实事件改编，回忆曾经辉煌的时刻。</i></p>
+                <a href="./docs/doc2.pdf" class="card-link">查看全文</a>
+            </div>
+        </div>
+        <br>
+        <div class="card bg-dark w-100 text-light">
+            <div class="card-body">
+                <h5 class="card-title">窗外</h5>
+                <p class="card-text p-2">以窗内视角，观窗外之变。       ——题记
+                </p>
+                <p class="card-text"><i>语文书中单元习作，但愿我们赖以生存的环境越来越好！</i></p>
+                <a href="./docs/doc3.pdf" class="card-link">查看全文</a>
+            </div>
+        </div>
+        <br>
+        <div class="card bg-dark w-100 text-light">
+            <div class="card-body">
+                <h5 class="card-title">你如同那一本书</h5>
+                <p class="card-text p-2">他就像那一本本书，给予渴求知识的我一份知识，一份自信，一份向前的动力……
+                </p>
+                <p class="card-text"><i>哪一本书给你留下过深刻的印象？</i></p>
+                <a href="./docs/doc4.pdf" class="card-link">查看全文</a>
+            </div>
+        </div>
+        <br>
+        <div class="card bg-dark w-100 text-light">
+            <div class="card-body">
+                <h5 class="card-title">我用毅力书写青春</h5>
+                <p class="card-text p-2">青春是一个人人生中最珍贵的年华，不仅是因为短暂、绚丽，更是因为它充满着勇敢、无畏和坚韧不屈的品质……
+                </p>
+                <p class="card-text"><i>莫见乎隐，莫显乎微，故君子慎其独也。</i></p>
+                <a href="./docs/doc5.pdf" class="card-link">查看全文</a>
+            </div>
+        </div>
+        <br>
+        <div class="card bg-dark w-100 text-light">
+            <div class="card-body">
+                <h5 class="card-title">最后的告别</h5>
+                <p class="card-text p-2">“感谢大家，让我们每个人在这阴暗的世界中再次有了家的感觉。”……
+                </p>
+                <p class="card-text"><i>我们永远都在。</i></p>
+                <a href="./docs/ct.pdf" class="card-link">查看全文</a>
+                <a href="https://backrooms-wiki-cn.wikidot.com/level-c-490" class="card-link">改编自Level-C-490</a>
+            </div>
+        </div>
+        <div class="container p-3">
+            <button class="btn btn-outline-light" onclick="show_after()">后记</button>
+            <div id="after" class="container w-75 p-3 text-light">
+                <h4>后记</h4>
+                <p>写作是最真实的感情的流露。写作记录生活、记录精彩、记录一份回忆。在今后也将成为我们的一份宝贵的回忆……故事尚未正式开始</p>
+                <h6>完</h6>
+                <a class="btn btn-outline-light" href="/index.html">回到首页</a>&ensp;<a class="btn btn-outline-light" href="/catchup">看看崩溃游戏</a>
+                <a class="btn btn-outline-light" href="https://space.bilibili.com/177150108">bilibili</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
