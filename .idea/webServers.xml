@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="421fc677-e5f4-4475-9ba6-bcbd5e5de95b" name="local" url="http://192.168.31.149:8888">
+        <fileTransfer mountedRoot="E:\githubio\Cubestudio001.github.io" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>
