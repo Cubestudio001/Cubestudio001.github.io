@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtFlow - 创意无限</title>
+    <title>Common Interactive - 关于我们</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/animate/4.1.1/animate.min.css">
     <script>
         tailwind.config = {
             theme: {
@@ -74,7 +73,7 @@
                 <a href="/" class="hover:text-primary transition-colors duration-300">CIOC</a>
                 <!-- 修改文本颜色为浅灰色（使用 Tailwind CSS 的 text-gray-400 类），悬停提示 Coming soon -->
                 <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300" style="pointer-events: none;" title="Coming soon">CI Lite</a>
-                <a href="/about" class="hover:text-primary transition-colors duration-300">关于我们</a>
+                <a href="#" class="hover:text-primary transition-colors duration-300">关于我们</a>
             </div>
             <button class="md:hidden text-2xl" id="menuToggle">
                 <i class="fa fa-bars"></i>
@@ -87,7 +86,7 @@
                 <a href="/" class="hover:text-primary transition-colors duration-300">CIOC</a>
                 <!-- 修改文本颜色为浅灰色（使用 Tailwind CSS 的 text-gray-400 类），悬停提示 Coming soon -->
                 <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300" style="pointer-events: none;" title="Coming soon">CI Lite</a>
-                <a href="/about/" class="hover:text-primary transition-colors duration-300">关于我们</a>
+                <a href="/about" class="hover:text-primary transition-colors duration-300">关于我们</a>
             </div>
         </div>
     </nav>
@@ -96,48 +95,36 @@
     <main class="container mx-auto px-4 pt-32 pb-20 relative z-10 min-h-screen flex flex-col justify-center items-center">
         <div class="text-center mb-12 max-w-4xl">
             <h1 class="text-[clamp(2.5rem,8vw,5rem)] font-display font-black leading-tight mb-6 text-glow">
-                <span class="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">从纸上到屏幕对面</span>
+                <span class="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">关于</span>
                 <br>
-                <span class="block">新的<span class="text-primary">交互体验</span></span>
+                <span class="block"><span class="text-primary">Common Interactive</span></span>
             </h1>
             <p class="text-[clamp(1rem,3vw,1.25rem)] text-gray-300 mb-10 max-w-2xl mx-auto">
-                释放你的创造力，不再拘泥于一问一答的死板对话。CIOC 将先进的 AI 技术与创新的交互体验结合，为你提供一个全新的原创角色创作平台。
+                一个暑假，两个年轻人的梦，Common Interactive在这里起源。
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="btn-glow group bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center">
-                    <span>下载预览版</span>
-                    <i class="fa fa-download ml-2 group-hover:translate-y-1 transition-transform duration-300"></i>
-                </a>
-            </div>
+            <p class="text-[clamp(1rem,3vw,1.25rem)] text-gray-300 mb-10 max-w-2xl mx-auto">
+                我们厌倦了传统AI交互中一问一答的死板套路，幻想一个不一样的AI交互，让AI像我们平时一样，或是主动挑起对话，或是已读不回……
+            </p>
+            <p class="text-[clamp(1rem,3vw,1.25rem)] text-gray-300 mb-10 max-w-2xl mx-auto">
+                AI是完美的，但也因此是刻板的，我们希望通过模拟真实的对话中那些人们的小想法，让交互更真实、更生动，也能为那些原创角色创造者提供更真实，更新鲜的体验，激发新的灵感。
+            </p>
         </div>
+        
 
-        <!-- 特性卡片 -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-5xl w-full">
-            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 group">
-                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors duration-300">
-                    <i class="fa fa-magic text-2xl text-primary"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">AI 角色创作</h3>
-                <p class="text-gray-400">利用先进的 AI 技术与大量可编辑的参数，打造真实的对话体验</p>
-            </div>
-            
-            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 group">
-                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors duration-300">
-                    <i class="fa fa-lock text-2xl text-primary"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">轻松管理权限</h3>
-                <p class="text-gray-400">可以将角色与他人分享，也可以打造只有自己的创作与体验空间</p>
-            </div>
-            
-            <div class="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:shadow-primary/5 group">
-                <div class="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/30 transition-colors duration-300">
-                    <i class="fa fa-quote-left text-2xl text-primary"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-3">真实交互体验</h3>
-                <p class="text-gray-400">打破传统的一问一答式交互，更接近日常网络互动</p>
-            </div>
+        <!-- 使命愿景 -->
+        <div class="mt-20 bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 max-w-3xl w-full">
+            <h2 class="text-2xl font-bold mb-6 text-center">Creator Lists</h2>
+            <p class="text-gray-400 mb-4 text-center">
+                Designed by ZBJ aka Emptyshadow
+            </p>
+            <p class="text-gray-400 text-center">
+                个人项目: Common Interactive
+            </p>
+            <p class="text-gray-400 text-center">
+                其他个人项目:
+                <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300" style="pointer-events: none;" title="Coming soon"><i class="fa fa-play-circle"></i> EmptyShadow (Coming Soon)</a>
+            </p>
         </div>
-
     </main>
 
     <!-- 页脚 -->
@@ -152,7 +139,7 @@
                     <p class="text-gray-400 mt-2">从纸上到现实，让创意触手可及</p>
                 </div>
                 <div class="flex space-x-6 mb-6 md:mb-0">
-                    <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
+                     <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
                         <i class="fa fa-github"></i>
                     </a>
                     <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-300">
@@ -261,4 +248,3 @@
     </script>
 </body>
 </html>
-    

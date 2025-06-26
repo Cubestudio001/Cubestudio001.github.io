@@ -1,0 +1,68 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <script src="/scr/jq.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <title>CubeStudio</title>
+</head>
+<body style="background-color: rgb(220, 220, 220);">
+    <nav class="navbar navbar-light bg-light" style="height: auto;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="favicon.ico" class="img-fluid" style="height:30px"/>CubeStudio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link text-warning" href="/catchup">崩溃游戏</a>
+              <a class="enav-link" href="/birthday/">实时年龄</a>
+              <a class="nav-link" href="/workset/">作文集</a>
+              <a class="nav-link disabled">Backrooms:Rebel</a>
+              <div class="dropdown">
+                <a class="nav-link btn btn-secondary dropdown-toggle" href="#" id="openSources" data-bs-toggle="dropdown" aria-expanded="false" title="本网站开源且使用了部分开源软件">开源</a>
+                <ul class="dropdown-menu" aria-labelledby="openSources">
+                    <li><a class="dropdown-item" href="https://github.com/Cubestudio001/Cubestudio001.github.io">网站</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/Cubestudio001/Cubestudio001.github.io/tree/main/birthday" title="实时年龄是本网站的一部分">实时年龄</a></li>
+                </ul>
+              </div>
+              <a class="nav-link">&ensp;</a>
+              <div class="dropdown">
+                <a class="nav-link btn btn-secondary dropdown-toggle" href="#" id="vids" data-bs-toggle="dropdown" aria-expanded="false">Social Media</a>
+                <ul class="dropdown-menu" aria-labelledby="vids">
+                    <li><a class="dropdown-item" href="https://space.bilibili.com/177150108">bilibili</a></li>
+                    <li><a class="dropdown-item" href="https://www.ixigua.com/home/97256564533">Xigua</a></li>
+                </ul>
+              </div>
+            </div>
+            </div>
+            </div>
+            </nav>
+    </nav>
+    <div class="container-fluid" style="text-align: center;">
+        <p class="text-center text-primary" style="font-size: 55px;">CubeStudio</p>
+        <br>
+        <button class="btn btn-outline-danger" onclick="dontClicke()">内测/千万别点</button>
+        <p class="text-center" style="color:rgb(0,155,240)">请点击上方导航栏去往想去的地方</p>
+        <p class="text-center" id="poison">IP ADDR</p>
+    </div>
+    <script>
+            $(document).ready(function(){
+            $.ajax({
+                url:"https://ipapi.co/json/",
+                success:function(result){
+                    $("#poison").text("Welcome there from "+result.city+" "+result.country_name+", Your IP is "+result.ip)
+                },
+                error:function(){
+                    console.log("Failed")
+                }
+            })
+        })
+        dontClicke = () => {
+            alert("在您点击确定后，我们将不会对页面正常负责");
+            alert("您即将跳转至外部页面参与我们的讨论");
+            window.location.href="https://new.swift-il.com/";
+        }
+    </script>
+</body>

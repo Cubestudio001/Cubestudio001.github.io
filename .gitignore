@@ -2,6 +2,7 @@
 t.py
 some_image/
 TODO
-.vs
+.vs/
 *.bak.js
 *.ts
+.idea/
