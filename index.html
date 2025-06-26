@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtFlow - 创意无限</title>
+    <title>CIOC</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/animate/4.1.1/animate.min.css">
@@ -45,6 +45,38 @@
             }
             .btn-glow {
                 box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
+            }
+            /* 模态框样式 */
+            .modal {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 9999;
+                /* 添加动画相关样式 */
+                animation: fadeIn 0.3s ease-out;
+            }
+            .modal-content {
+                background-color: #1e293b; /* 暗色背景 */
+                color: white; /* 白色文字 */
+                border-radius: 0.5rem;
+                padding: 2rem;
+                max-width: 32rem;
+                margin: 10% auto;
+                /* 添加动画相关样式 */
+                animation: slideIn 0.3s ease-out;
+            }
+            /* 定义动画 */
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+            @keyframes slideIn {
+                from { transform: translateY(-50px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
             }
         }
     </style>
@@ -104,7 +136,7 @@
                 释放你的创造力，不再拘泥于一问一答的死板对话。CIOC 将先进的 AI 技术与创新的交互体验结合，为你提供一个全新的原创角色创作平台。
             </p>
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#" class="btn-glow group bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center">
+                <a href="#" class="btn-glow group bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:to-primary text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center" id="downloadBtn">
                     <span>下载预览版</span>
                     <i class="fa fa-download ml-2 group-hover:translate-y-1 transition-transform duration-300"></i>
                 </a>
@@ -139,6 +171,15 @@
         </div>
 
     </main>
+
+    <!-- 即将上线模态框 -->
+    <div id="comingSoonModal" class="modal">
+        <div class="modal-content text-center">
+            <h2 class="text-xl font-bold mb-4">即将上线</h2>
+            <p class="mb-6">预览版即将上线</p>
+            <button id="closeModalBtn" class="bg-primary text-white py-2 px-4 rounded hover:bg-secondary transition-colors duration-300">关闭</button>
+        </div>
+    </div>
 
     <!-- 页脚 -->
     <footer class="py-10 border-t border-white/10 relative z-10">
@@ -258,6 +299,30 @@
             }
         `;
         document.head.appendChild(style);
+
+        // 下载按钮点击事件
+        const downloadBtn = document.getElementById('downloadBtn');
+        const comingSoonModal = document.getElementById('comingSoonModal');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+
+        downloadBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            comingSoonModal.style.display = 'block';
+        });
+
+        // 关闭模态框
+        closeModalBtn.addEventListener('click', () => {
+            comingSoonModal.style.display = 'none';
+        });
+
+        // 点击模态框外部关闭模态框
+        window.addEventListener('click', (e) => {
+            if (e.target === comingSoonModal) {
+                comingSoonModal.style.display = 'none';
+            }
+        });
+
+        // ... 已有代码 ...
     </script>
 </body>
 </html>
